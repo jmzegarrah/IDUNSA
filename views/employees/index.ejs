@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees/create">Crear Empleado</a></h3>
+      <h1>Lista de Empleados</h1>
+      <% if(employees.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th>Nombre del Empleado</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<employees.length;i++) { %>
+            <tr>
+              <td><a href="/employees/show/<%= employees[i]._id%>"><%= employees[i].name%></a></td>
+              <td><%= employees[i].position%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No se han encontrado Empleados</div>
+      <% } %>
+    </div>
+  </body>
+</html>

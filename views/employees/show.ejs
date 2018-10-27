@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detalle del Empleado</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Lista de Empleados</a></h3>
+      <h1>Detalle del Empleado</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Nombre</td>
+            <td>:</td>
+            <td><%= employee.name %></td>
+          </tr>
+          <tr>
+            <td>Direccion</td>
+            <td>:</td>
+            <td><%= employee.address %></td>
+          </tr>
+          <tr>
+            <td>Rol</td>
+            <td>:</td>
+            <td><%= employee.position %></td>
+          </tr>
+          <tr>
+            <td>Salario</td>
+            <td>:</td>
+            <td>$<%= employee.salary %>/year</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/employees/edit/<%= employee._id%>">Editar</a></h3>
+      <form action="/employees/delete/<%= employee._id%>" method="post">
+        <button type="submit">Eliminar</button>
+      </form>
+    </div>
+  </body>
+</html>

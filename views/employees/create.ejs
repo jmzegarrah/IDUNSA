@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Employee</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Lista de Empleados</a></h3>
+      <h1>Crear Nuevo Empleado</h1>
+      <form action="/employees/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Nombre</td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+              <td>Direccion</td>
+              <td><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+              <td>Rol</td>
+              <td><input type="text" name="position" /></td>
+            </tr>
+            <tr>
+              <td>Salario</td>
+              <td><input type="number" name="salary" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Guardar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
