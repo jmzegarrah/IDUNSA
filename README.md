@@ -13,6 +13,8 @@ Luego ejecutar
 
 "**nodemon app.js**"  ---> Este comando les permitira editar los archivos que deseen sin tener que preocuparse por reiniciar el servidor Node.
 
+Desde su navegador ingresar a : http://localhost:3000
+
 En caso de error en el comando anterior, ejecutar este comando:
 
 "**npm i nodemon -g -s**"  ---> Descargara Nodemon y lo guardara en el cache de Paquetes Node para que pueda ser utiizado en proyectos futuros.
