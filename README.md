@@ -4,9 +4,15 @@
 Antes de poder ejecutar el proyecto, deberan tener instalado tanto NodeJS como MongoDB.
 
 Descargar Node : https://nodejs.org/es/download/
+
 Descargar MongoDB : https://www.mongodb.com/download-center/community
+
 Descargar Robomongo : https://robomongo.org
+
 Descargar SourceTree : https://www.sourcetreeapp.com
+
+Enlace a el diccionario de datos : https://docs.google.com/spreadsheets/d/1ameunIgI74PCmBGVGz2g7ETJhw7D7OQqNXXCuYeoInM/edit#gid=1157107366
+
 
 Luego de haber clonado el proyecto, deberan utilizar los siguientes comandos para poder hacer uso:
 
