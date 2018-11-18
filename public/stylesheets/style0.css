@@ -1,0 +1,49 @@
+body {
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #555555;
+}
+
+a {
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif !important;
+  color: #00B7FF;
+}
+
+.container {
+  padding: 20px;
+  background-color: #efefef;
+  width: 460px;
+  border-radius: 6px;
+}
+.container h3 a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+
+.container h3 a:hover, .container table tr td button:hover {
+  background-color: #78F5AE;
+  color: #999999;
+}
+
+.container table {
+  width: 360px;
+}
+
+.container table tr td input, .container table tr td textarea {
+  border: solid 1px #dddddd;
+  border-radius: 6px;
+  width: 100%;
+  color: #777777;
+}
+
+.container .list-table {
+  width: 360px;
+  border: solid 2px #DDDDDD;
+  border-spacing: 0;
+}
+
+.container .list-table th {
+  border-bottom: solid 2px #DDDDDD;
+}

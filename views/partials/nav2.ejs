@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default navbar-static-top" style="width:100%;overflow:hidden;height:30px;background-color:#595959;font-size:17px;font-family:'Segoe UI',Arial,sans-serif">
+<div class="container-fluid">
+    <ul class="nav navbar-nav" style="margin-left:-20px">
+        <li class="dropdown">
+            <button type="" class="dropbtn" onclick="myfunction()" >ALL <i class="fa fa-caret-down"></i> </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+</nav>
+
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myfunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (e) {
+        if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+        }
+    }
+</script>

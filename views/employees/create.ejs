@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Create Employee</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<% include ../partials/head.ejs %>
+<link rel='stylesheet' href='/stylesheets/style0.css' />
   <body>
-    <div class="container">
-      <h3><a href="/employees">Lista de Empleados</a></h3>
+    <% include ../partials/nav.ejs %>
+    <div class="container" align="center">
       <h1>Crear Nuevo Empleado</h1>
       <form action="/employees/save" method="post">
         <table>
@@ -17,7 +13,7 @@
             </tr>
             <tr>
               <td>Direccion</td>
-              <td><textarea name="address"></textarea></td>
+              <td><input type="text" name="address" /></td>
             </tr>
             <tr>
               <td>Rol</td>
@@ -28,11 +24,11 @@
               <td><input type="number" name="salary" /></td>
             </tr>
             <tr>
-              <td colspan="2"><button type="submit">Guardar</button></td>
+              <td colspan="2" align="center"><button class="btn btn-success btn-sm" type="submit" >Guardar</button>
+              <a href="/employees" class="btn btn-danger btn-sm">Cancelar</a></td>
             </tr>
           </tbody>
         </table>
       </form>
     </div>
   </body>
-</html>

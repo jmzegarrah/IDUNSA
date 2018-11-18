@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Detalle del Empleado</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<% include ../partials/head.ejs %>
+<link rel='stylesheet' href='/stylesheets/style0.css' />
   <body>
-    <div class="container">
-      <h3><a href="/employees">Lista de Empleados</a></h3>
+    <% include ../partials/nav.ejs %>
+    <div class="container" align="center">
       <h1>Detalle del Empleado</h1>
       <table>
         <tbody>
@@ -30,12 +26,14 @@
             <td>:</td>
             <td>$<%= employee.salary %>/year</td>
           </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="/employees" class="btn btn-primary btn-sm">Regresar</a> </td>
+          </tr>
         </tbody>
       </table>
-      <h3><a href="/employees/edit/<%= employee._id%>">Editar</a></h3>
-      <form action="/employees/delete/<%= employee._id%>" method="post">
-        <button type="submit">Eliminar</button>
-      </form>
+
     </div>
   </body>
-</html>

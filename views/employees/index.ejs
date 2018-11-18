@@ -1,27 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Employee List</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<% include ../partials/head.ejs %>
+<link rel='stylesheet' href='/stylesheets/style3.css' />
   <body>
+    <% include ../partials/nav.ejs %>
     <div class="container">
-      <h3><a href="/employees/create">Crear Empleado</a></h3>
       <h1>Lista de Empleados</h1>
       <% if(employees.length>0) { %>
-      <table class="list-table">
-        <thead>
+      <table class="table table-hover table-sm table-bordered table-striped">
+        <thead class="thead-dark">
           <tr>
             <th>Nombre del Empleado</th>
             <th>Rol</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-
           <% for(var i=0; i<employees.length;i++) { %>
             <tr>
-              <td><a href="/employees/show/<%= employees[i]._id%>"><%= employees[i].name%></a></td>
-              <td><%= employees[i].position%></td>
+              <td class="align-middle"><a href="/employees/show/<%= employees[i]._id%>"><%= employees[i].name%></a></td>
+              <td class="align-middle"><%= employees[i].position%></td>
+              <td class="column-verticallineMiddle align-middle">
+                <div class="row">
+                  <div class="col-sm-2"><a href="/employees/edit/<%= employees[i]._id %>"><input type="button" class="btn btn-info btn-sm" value="Editar"></a></div>
+                  <div class="col-sm-2"><form action="/employees/delete/<%= employees[i]._id%>" method="post">
+                    <button type="submit" class="btn btn-danger btn-delete btn-sm">Eliminar</button>
+                  </form></div>
+                </div>
+               </td>
             </tr>
           <% } %>
         </tbody>
@@ -31,4 +35,3 @@
       <% } %>
     </div>
   </body>
-</html>
